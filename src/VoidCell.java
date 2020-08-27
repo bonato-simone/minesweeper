@@ -5,8 +5,8 @@ import javafx.scene.text.Text;
 public class VoidCell extends Cell{
     private int adjacentMines;
 
-    public VoidCell(Grid grid, int row, int column, double latoCella) {
-        super(grid, row, column, latoCella);
+    public VoidCell(Grid grid, int row, int column, double cellSide) {
+        super(grid, row, column, cellSide);
         
         addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
