@@ -8,11 +8,11 @@ public abstract class Cell extends StackPane {
     private final int ROW, COLUMN;
     final Rectangle background;
 
-    public Cell(Grid grid, int row, int column, double latoCella) {
+    public Cell(Grid grid, int row, int column, double cellSide) {
         ROW = row;
         COLUMN = column;
         
-        background = new Rectangle(latoCella, latoCella, Color.BLUE);
+        background = new Rectangle(cellSide, cellSide, Color.BLUE);
         
         getChildren().add(background);
     }
