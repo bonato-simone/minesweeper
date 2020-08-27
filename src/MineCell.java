@@ -6,8 +6,8 @@ import javafx.scene.shape.Circle;
 
 public class MineCell extends Cell{
 
-    public MineCell(Grid grid, int row, int column, double latoCella) {
-        super(grid, row, column, latoCella);
+    public MineCell(Grid grid, int row, int column, double cellSide) {
+        super(grid, row, column, cellSide);
         
         addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
@@ -19,7 +19,7 @@ public class MineCell extends Cell{
                 }
                 
                 MineCell.this.changeBackground();
-                Circle circle = new Circle(latoCella / 2, Color.RED);
+                Circle circle = new Circle(cellSide / 2, Color.RED);
                 MineCell.this.getChildren().add(circle);
                 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
